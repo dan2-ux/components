@@ -1,4 +1,4 @@
-#include "setup.h"
+#include "hcr04.h"
 #include "esp_timer.h"
 #include "esp_rom_sys.h"
 #include "freertos/FreeRTOS.h"
@@ -84,14 +84,8 @@ void hcr04_init(gpio_num_t trig, gpio_num_t echo)
     st.Setup();
 }
 
-float hcr04_get_value_c(gpio_num_t trig, gpio_num_t echo)
+float hcr04_get_value(gpio_num_t trig, gpio_num_t echo)
 {
     HCR04::Measure m(trig, echo);
     return m.getValue_C();
-}
-
-float hcr04_get_value_f(gpio_num_t trig, gpio_num_t echo)
-{
-    HCR04::Measure m(trig, echo);
-    return (m.getValue_C() * 9 / 5) + 32;
 }

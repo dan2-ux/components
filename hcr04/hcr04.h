@@ -13,8 +13,7 @@ extern "C"
 #endif
 
     void hcr04_init(gpio_num_t trig, gpio_num_t echo);
-    float hcr04_get_value_c(gpio_num_t trig, gpio_num_t echo);
-    float hcr04_get_value_f(gpio_num_t trig, gpio_num_t echo);
+    float hcr04_get_value(gpio_num_t trig, gpio_num_t echo);
 
 #ifdef __cplusplus
 }
