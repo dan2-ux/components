@@ -10,7 +10,7 @@ void distanceDisplay(void *arg)
 {
     while (1)
     {
-        printf("Distance: %f C\n", hcr04_get_value_c(trig, echo));
+        printf("Distance: %f C\n", hcr04_get_value(trig, echo));
         vTaskDelay(pdMS_TO_TICKS(500));
     }
 }

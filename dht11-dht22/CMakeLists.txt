@@ -1,4 +1,4 @@
-idf_component_register(SRCS "example-dht22.cpp" "dht.cpp"
+idf_component_register(SRCS "example-dht11.cpp" "example-dht22.cpp" "dht.cpp"
                        INCLUDE_DIRS "."
-                       REQUIRES driver esp_timer
+                       REQUIRES esp_driver_gpio esp_timer
                        )
